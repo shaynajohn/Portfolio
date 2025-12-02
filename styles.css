@@ -60,7 +60,7 @@ body {
 }
 
 .header-content {
-  max-width: 700px;
+  max-width: 800px;
   margin: 0 auto;
 }
 
@@ -83,12 +83,37 @@ body {
   font-size: 18px;
   color: var(--text-muted);
   font-weight: 300;
-  max-width: 600px;
-  margin: 0 auto;
+  max-width: 700px;
+  margin: 0 auto 24px;
+  line-height: 1.7;
+}
+
+.header-highlights {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 24px;
+}
+
+.highlight-pill {
+  font-size: 13px;
+  padding: 6px 14px;
+  border-radius: 20px;
+  background: var(--accent-light);
+  color: var(--accent);
+  font-weight: 500;
+  border: 1px solid var(--border);
 }
 
 .section {
   margin-bottom: 80px;
+}
+
+.section-intro {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 50px;
 }
 
 .section-title {
@@ -96,8 +121,14 @@ body {
   font-weight: 300;
   letter-spacing: -0.01em;
   color: var(--text);
-  margin-bottom: 40px;
-  text-align: center;
+  margin-bottom: 16px;
+}
+
+.section-subtitle {
+  font-size: 16px;
+  color: var(--text-muted);
+  line-height: 1.7;
+  font-weight: 300;
 }
 
 .projects-grid {
@@ -117,7 +148,8 @@ body {
 
 .project-card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 12px 24px rgba(236, 72, 153, 0.1);
+  box-shadow: 0 12px 24px rgba(236, 72, 153, 0.15);
+  border-color: var(--pink-300);
 }
 
 .project-image {
@@ -143,6 +175,20 @@ body {
   color: var(--text-muted);
   margin-bottom: 16px;
   line-height: 1.6;
+}
+
+.project-impact {
+  font-size: 14px;
+  padding: 10px 14px;
+  background: var(--accent-light);
+  border-radius: 8px;
+  margin-bottom: 16px;
+  color: var(--accent);
+  font-weight: 500;
+}
+
+.project-impact strong {
+  color: var(--pink-700);
 }
 
 .project-highlights {
@@ -183,7 +229,7 @@ body {
 }
 
 .experience-list {
-  max-width: 800px;
+  max-width: 900px;
   margin: 0 auto;
 }
 
@@ -228,8 +274,42 @@ body {
 .experience-description {
   font-size: 15px;
   color: var(--text-muted);
-  margin-bottom: 12px;
+  margin-bottom: 16px;
   line-height: 1.6;
+}
+
+.experience-metrics {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+}
+
+.metric-badge {
+  padding: 12px 16px;
+  background: var(--bg-alt);
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  min-width: 120px;
+}
+
+.metric-value {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--accent);
+  margin-bottom: 4px;
+}
+
+.metric-label {
+  font-size: 12px;
+  color: var(--text-muted);
+  margin-bottom: 2px;
+}
+
+.metric-trend {
+  font-size: 11px;
+  color: var(--pink-600);
+  font-weight: 500;
 }
 
 .experience-achievements {
@@ -243,6 +323,7 @@ body {
   padding-left: 20px;
   position: relative;
   margin-bottom: 6px;
+  line-height: 1.5;
 }
 
 .experience-achievements li::before {
@@ -250,6 +331,42 @@ body {
   position: absolute;
   left: 0;
   color: var(--accent);
+}
+
+.why-netflix-section {
+  background: var(--bg-alt);
+  padding: 60px 40px;
+  border-radius: 24px;
+  margin: 80px 0;
+}
+
+.why-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.why-card {
+  background: white;
+  padding: 28px;
+  border-radius: 16px;
+  border: 1px solid var(--border);
+}
+
+.why-title {
+  font-size: 20px;
+  font-weight: 500;
+  color: var(--text);
+  margin-bottom: 12px;
+  letter-spacing: -0.01em;
+}
+
+.why-text {
+  font-size: 15px;
+  color: var(--text-muted);
+  line-height: 1.7;
 }
 
 .skills-section {
@@ -295,6 +412,13 @@ body {
 .footer p {
   font-size: 14px;
   color: var(--text-muted);
+  margin-bottom: 8px;
+}
+
+.footer-subtitle {
+  font-size: 13px;
+  color: var(--text-muted);
+  font-style: italic;
 }
 
 @media (max-width: 768px) {
@@ -315,10 +439,12 @@ body {
     gap: 24px;
   }
   
+  .why-netflix-section,
   .skills-section {
     padding: 40px 24px;
   }
   
+  .why-grid,
   .skills-grid {
     grid-template-columns: 1fr;
     gap: 24px;
@@ -326,5 +452,13 @@ body {
   
   .experience-header {
     flex-direction: column;
+  }
+  
+  .experience-metrics {
+    flex-direction: column;
+  }
+  
+  .metric-badge {
+    width: 100%;
   }
 }
