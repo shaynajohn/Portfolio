@@ -333,47 +333,16 @@ body {
   color: var(--accent);
 }
 
-.why-netflix-section {
-  background: var(--bg-alt);
-  padding: 60px 40px;
-  border-radius: 24px;
-  margin: 80px 0;
-}
-
-.why-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 24px;
-  max-width: 1000px;
-  margin: 0 auto;
-}
-
-.why-card {
-  background: white;
-  padding: 28px;
-  border-radius: 16px;
-  border: 1px solid var(--border);
-}
-
-.why-title {
-  font-size: 20px;
-  font-weight: 500;
-  color: var(--text);
-  margin-bottom: 12px;
-  letter-spacing: -0.01em;
-}
-
-.why-text {
-  font-size: 15px;
-  color: var(--text-muted);
-  line-height: 1.7;
-}
 
 .skills-section {
   background: var(--bg-alt);
   padding: 60px 40px;
   border-radius: 24px;
   margin: 80px 0;
+}
+
+.skills-section .section-intro {
+  margin-bottom: 40px;
 }
 
 .skills-grid {
@@ -439,12 +408,10 @@ body {
     gap: 24px;
   }
   
-  .why-netflix-section,
   .skills-section {
     padding: 40px 24px;
   }
   
-  .why-grid,
   .skills-grid {
     grid-template-columns: 1fr;
     gap: 24px;

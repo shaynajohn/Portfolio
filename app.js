@@ -20,13 +20,13 @@ function ProjectCard({ title, description, highlights, tags, image, impact }) {
         {impact && (
           <div className="project-impact">
             <strong>Impact:</strong> {impact}
-          </div>
+      </div>
         )}
         <ul className="project-highlights">
           {highlights.map((h, i) => (
             <li key={i}>{h}</li>
-          ))}
-        </ul>
+        ))}
+      </ul>
         <div className="project-tags">
           {tags.map((tag) => (
             <span key={tag} className="tag">{tag}</span>
@@ -59,8 +59,8 @@ function ExperienceItem({ company, role, period, description, achievements, metr
         <ul className="experience-achievements">
           {achievements.map((a, i) => (
             <li key={i}>{a}</li>
-          ))}
-        </ul>
+              ))}
+            </ul>
       )}
     </div>
   );
@@ -74,12 +74,13 @@ function App() {
           <h1 className="name">Shayna John</h1>
           <p className="tagline">Data Visualization Engineer</p>
           <p className="intro">
-            Building interactive visualizations that drive member engagement and data-driven decisions at scale
+            Building interactive dashboards and data visualizations that transform complex datasets 
+            into clear, actionable insights—from real-time analytics to experiment readouts.
           </p>
           <div className="header-highlights">
-            <span className="highlight-pill">Experimentation & A/B Testing</span>
-            <span className="highlight-pill">Member-Centric Design</span>
-            <span className="highlight-pill">Real-Time Analytics</span>
+            <span className="highlight-pill">Interactive Dashboards</span>
+            <span className="highlight-pill">Data Storytelling</span>
+            <span className="highlight-pill">Real-Time Visualization</span>
           </div>
         </div>
       </header>
@@ -88,8 +89,9 @@ function App() {
         <div className="section-intro">
           <h2 className="section-title">Data Visualization Projects</h2>
           <p className="section-subtitle">
-            Interactive dashboards and visualizations that translate complex data into actionable insights, 
-            driving engagement and supporting experimentation workflows.
+            Interactive dashboards, real-time visualizations, and data storytelling tools that transform 
+            complex datasets into clear narratives. Each project demonstrates visualization design principles, 
+            user-centered thinking, and technical execution at scale.
           </p>
         </div>
         <div className="projects-grid">
@@ -99,10 +101,10 @@ function App() {
             enabling coaches to discover patterns and make data-driven decisions in real-time."
             impact="30% improvement in coaching workflow efficiency"
             highlights={[
-              "Built retrieval pipeline with vector embeddings for fast access to historical play patterns",
-              "Designed intuitive UI for exploring similar plays and contextual recommendations",
-              "Visualized model confidence scores alongside recommendations for transparency",
-              "Supported interactive analytics with sub-second query latency"
+              "Built interactive React dashboard with real-time data visualization of coaching insights",
+              "Designed custom visualization components for exploring similar plays and pattern discovery",
+              "Created visualization layer showing model confidence scores, recommendation rationale, and contextual data",
+              "Implemented drill-down visualizations enabling coaches to explore from high-level metrics to detailed play analysis"
             ]}
             tags={["React", "Node.js", "Vector Embeddings", "OpenAI API", "Real-Time"]}
             image="linear-gradient(135deg, #fce7f3 0%, #fbcfe8 100%)"
@@ -114,10 +116,10 @@ function App() {
             analysis to surface personalized product recommendations with clear rationale."
             impact="1,000+ real-time recommendations delivered"
             highlights={[
-              "NLP sentiment modeling on 15K+ product reviews to understand satisfaction drivers",
-              "Dynamic visualizations of ratings trends, sentiment distribution, and recommendation confidence",
-              "Transparent explanation UI showing why products match user preferences",
-              "A/B tested explanation formats to optimize engagement and trust"
+              "Built interactive Streamlit dashboard with dynamic visualizations of ratings trends and sentiment analysis",
+              "Created custom chart components: time-series sentiment trends, distribution histograms, confidence score visualizations",
+              "Designed transparent explanation UI with visual rationale showing product match reasoning",
+              "Implemented A/B testing framework with visualization readouts comparing explanation format performance"
             ]}
             tags={["Python", "Streamlit", "NLP", "Recommender Systems", "A/B Testing"]}
             image="linear-gradient(135deg, #fdf2f8 0%, #fce7f3 100%)"
@@ -129,10 +131,10 @@ function App() {
             enabling users to explore and discover music through interactive visualizations."
             impact="10K+ song lyrics analyzed for sentiment patterns"
             highlights={[
-              "Sentiment analysis pipeline processing 10K+ song lyrics for mood classification",
-              "GPT-powered theme extraction to understand lyrical content beyond sentiment",
-              "Interactive mood space visualization for exploration vs. passive recommendation",
-              "Spotify API integration for on-demand playlist generation"
+              "Created interactive mood space visualization mapping 10K+ songs into explorable 2D/3D mood clusters",
+              "Built dynamic visualization dashboard showing sentiment trends, mood transitions, and lyrical themes",
+              "Designed custom visualization components for mood exploration with filtering and drill-down capabilities",
+              "Integrated real-time visualization updates as users explore and generate playlists"
             ]}
             tags={["NLP", "GPT", "Sentiment Analysis", "Streamlit", "Spotify API"]}
             image="linear-gradient(135deg, #fef3c7 0%, #fde68a 100%)"
@@ -144,10 +146,10 @@ function App() {
             adopted by engineering teams and leadership for operational visibility and cost optimization."
             impact="50K+ daily records processed, adopted by 50+ stakeholders"
             highlights={[
-              "Engineered ETL pipelines in Apache Airflow processing 50K+ daily server cost records",
-              "Visualized pipeline latency trends, cost breakdowns, and migration progress",
-              "Designed executive-level KPIs alongside detailed engineering metrics",
-              "Refactored legacy DAGs with Docker for improved scalability and reliability"
+              "Built comprehensive Qlik dashboard with time-series visualizations tracking 50K+ daily cost records",
+              "Created multi-level visualization hierarchy: executive KPI cards → detailed cost breakdown charts → drill-down tables",
+              "Designed custom visualizations: pipeline latency trends, cost distribution histograms, migration progress indicators",
+              "Implemented interactive filtering and cross-chart highlighting for exploratory data analysis"
             ]}
             tags={["Qlik", "Apache Airflow", "Azure", "AWS", "ETL", "Docker"]}
             image="linear-gradient(135deg, #e0e7ff 0%, #c7d2fe 100%)"
@@ -159,10 +161,10 @@ function App() {
             visualizing key KPIs and supporting ad-hoc analytics for 50+ stakeholders."
             impact="50+ stakeholders using dashboards for daily decision-making"
             highlights={[
-              "Built and maintained operational dashboards tracking KPIs across business units",
-              "Wrote complex SQL queries on Snowflake for ETL validation and ad-hoc analytics",
-              "Designed visualization hierarchy: executive summaries → detailed drill-downs",
-              "Created time-series visualizations for trend analysis and forecasting"
+              "Designed and built interactive Tableau dashboards with 50+ visualizations tracking operational KPIs",
+              "Created comprehensive visualization suite: executive summary dashboards, operational drill-downs, trend analysis",
+              "Built custom time-series visualizations, heatmaps, and comparative charts for cross-unit analysis",
+              "Implemented dynamic filtering, parameter controls, and action filters enabling self-service analytics"
             ]}
             tags={["Tableau", "Snowflake", "SQL", "Data Visualization", "Time-Series"]}
             image="linear-gradient(135deg, #ddd6fe 0%, #c4b5fd 100%)"
@@ -174,10 +176,10 @@ function App() {
             complex economic data into clear insights for research publications and presentations."
             impact="10K+ financial records processed weekly"
             highlights={[
-              "Automated Python ETL pipelines ingesting 10K+ financial records weekly from multiple sources",
-              "Created publication-quality visualizations for time-series and regression analyses",
-              "Designed visualizations that communicate statistical significance and effect sizes",
-              "Supported research presentations with clear, data-driven narratives"
+              "Created publication-quality data visualizations for time-series and regression analyses",
+              "Designed custom visualization components showing statistical significance, confidence intervals, and effect sizes",
+              "Built interactive Python visualizations (Matplotlib/Seaborn) enabling researchers to explore data relationships",
+              "Developed visualization templates for consistent, clear presentation of economic research findings"
             ]}
             tags={["Python", "ETL", "Time-Series", "Regression Analysis", "Research"]}
             image="linear-gradient(135deg, #fce7f3 0%, #f9a8d4 100%)"
@@ -189,10 +191,10 @@ function App() {
             game state visualization and smooth player experience for 20+ concurrent users."
             impact="20+ concurrent users, sub-100ms latency"
             highlights={[
-              "Built real-time game state visualization using React, Node.js, Socket.io, and Firebase",
-              "Designed intuitive UI for game state tracking and player interactions",
-              "Optimized for low-latency updates ensuring smooth multiplayer experience",
-              "Focused on UX patterns that reduce cognitive load during fast-paced gameplay"
+              "Built real-time visualization dashboard tracking game state, player actions, and live metrics",
+              "Created custom React visualization components for game state representation with sub-100ms update latency",
+              "Designed visualization patterns optimized for fast comprehension during high-speed gameplay",
+              "Implemented real-time data streaming visualization ensuring smooth, lag-free user experience"
             ]}
             tags={["React", "Node.js", "Socket.io", "Firebase", "Real-Time"]}
             image="linear-gradient(135deg, #dbeafe 0%, #bfdbfe 100%)"
@@ -220,9 +222,9 @@ function App() {
               { value: "Real-time", label: "Query Latency", trend: "Sub-second" }
             ]}
             achievements={[
-              "Designed retrieval pipeline with vector embeddings & OpenAI API for fast access to historical play patterns",
-              "Built interactive analytics supporting exploration of similar plays and contextual recommendations",
-              "Visualized model confidence scores alongside recommendations for transparency and trust"
+              "Built interactive React dashboard visualizing context-aware coaching insights with real-time updates",
+              "Designed custom visualization components for exploring similar plays, pattern discovery, and recommendation rationale",
+              "Created visualization layer showing model confidence scores, contextual data, and interactive drill-downs"
             ]}
           />
           
@@ -248,9 +250,9 @@ function App() {
               { value: "50+", label: "Stakeholders", trend: "Adopted" }
             ]}
             achievements={[
-              "Ingested 50K+ daily server cost records from Azure & AWS into Unified Data Management system",
-              "Developed interactive Qlik dashboard tracking pipeline latency & cloud migration KPIs",
-              "Refactored & containerized legacy Airflow DAGs with Docker, improving scalability"
+              "Built comprehensive Qlik dashboard with time-series visualizations, cost breakdowns, and migration progress tracking",
+              "Designed multi-level visualization hierarchy: executive KPIs → detailed engineering metrics → drill-down analysis",
+              "Created interactive visualizations enabling self-service exploration of 50K+ daily cost records"
             ]}
           />
 
@@ -264,8 +266,9 @@ function App() {
               { value: "40%", label: "Query Latency", trend: "↓ reduction" }
             ]}
             achievements={[
-              "Implemented data preprocessing & embedding pipelines that reduced query latency by 40%",
-              "Built visualization layer for model insights with context for user validation"
+              "Built interactive Python & React dashboard visualizing AI model insights and academic performance trends",
+              "Designed visualization components showing model predictions, confidence intervals, and contextual explanations",
+              "Created data visualization layer enabling educators to explore and validate model insights"
             ]}
           />
 
@@ -279,54 +282,18 @@ function App() {
               { value: "50+", label: "Stakeholders", trend: "Daily users" }
             ]}
             achievements={[
-              "Built & maintained interactive Tableau dashboards adopted by 50+ stakeholders",
-              "Wrote SQL queries on Snowflake for ETL validation & ad hoc analytics",
-              "Conducted analyses supporting strategic initiatives & visualized key KPIs for leadership"
+              "Designed and built 50+ interactive Tableau visualizations across operational dashboards",
+              "Created comprehensive visualization suite: executive summaries, operational drill-downs, trend analysis charts",
+              "Built custom visualizations including time-series, heatmaps, and comparative charts for strategic decision-making"
             ]}
           />
         </div>
       </section>
 
-      <section className="section why-netflix-section">
-        <div className="section-intro">
-          <h2 className="section-title">Why Data Visualization at Netflix</h2>
-          <p className="section-subtitle">
-            I'm drawn to Netflix's culture of experimentation and data-driven decision making. 
-            The opportunity to build visualizations that help teams understand member behavior, 
-            evaluate A/B test results, and drive product decisions at Netflix's scale is exactly 
-            the kind of impact I want to make.
-          </p>
-        </div>
-        <div className="why-grid">
-          <div className="why-card">
-            <h3 className="why-title">Experimentation at Scale</h3>
-            <p className="why-text">
-              I've built dashboards that support A/B testing workflows and translate experiment 
-              results into actionable insights. At Netflix, I'd help teams understand what's 
-              working and why through clear, compelling visualizations.
-            </p>
-          </div>
-          <div className="why-card">
-            <h3 className="why-title">Member-Centric Design</h3>
-            <p className="why-text">
-              My work on recommendation systems (Beautify, Moodify) taught me to think about 
-              how visualizations can build trust and help users understand why content is 
-              recommended—critical for Netflix's personalization efforts.
-            </p>
-          </div>
-          <div className="why-card">
-            <h3 className="why-title">Technical Depth</h3>
-            <p className="why-text">
-              From real-time React dashboards to ETL pipelines processing millions of records, 
-              I have the full-stack skills to build visualization tools that are both beautiful 
-              and performant at Netflix's scale.
-            </p>
-          </div>
-        </div>
-      </section>
-
       <section className="section skills-section">
-        <h2 className="section-title">Technical Skills</h2>
+        <div className="section-intro">
+          <h2 className="section-title">Technical Skills</h2>
+        </div>
         <div className="skills-grid">
           <div className="skill-category">
             <h3 className="skill-category-title">Frontend & Visualization</h3>
